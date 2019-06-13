@@ -1,11 +1,12 @@
-import android.arch.lifecycle.ViewModelProvider;
+package com.ghadban.mariam.mariamlibrary;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.ContactsContract;
-import android.renderscript.Sampler;
+
+import com.ghadban.mariam.mariamlibrary.MyPhone;
 
 import java.util.ArrayList;
 
@@ -18,7 +19,6 @@ public class MyPhoneTable extends SQLiteOpenHelper {
     private static final String KEY_NAME = "name";
     private static final String KEY_Price = "Price";
     private static final String KEY_company = "company";
-    private static final String KEY_Production = "Production";
     private static final String KEY_year = "year";
 
     public MyPhoneTable(Context context) {
@@ -32,7 +32,6 @@ public class MyPhoneTable extends SQLiteOpenHelper {
                 + KEY_NAME + "TEXT,"
                 + KEY_Price + "TEXT,"
                 + KEY_company + "TEXT,"
-                + KEY_Production + "TEXT,"
                 + KEY_year + "TEXT" + ")";
         db.execSQL(sqlCreate);
     }
@@ -51,7 +50,6 @@ public class MyPhoneTable extends SQLiteOpenHelper {
         values.put(KEY_NAME, phone.getName());
         values.put(KEY_Price, phone.getprice());
         values.put(KEY_company, phone.getCompany());
-        values.put(KEY_Production, phone.getProduction());
         values.put(KEY_year, phone.getYear());
         long row = db.insert(TABLE_PHONE, null, values);
         db.close();
@@ -64,7 +62,6 @@ public class MyPhoneTable extends SQLiteOpenHelper {
         values.put(KEY_NAME, phone.getName());
         values.put(KEY_Price, phone.getprice());
         values.put(KEY_company, phone.getCompany());
-        values.put(KEY_Production, phone.getProduction());
         values.put(KEY_year, phone.getYear());
         int num = db.update(TABLE_PHONE, values, KEY_ID + "=" + phone.get_id(), null);
         db.close();
@@ -91,9 +88,9 @@ public class MyPhoneTable extends SQLiteOpenHelper {
             phone.setName(cursor.getString(2));
             phone.setPrice(cursor.getDouble(3));
             phone.setCompany(cursor.getString(4));
-            phone.setProduction(cursor.getString(5));
             phoneList.add(phone);
             flag = cursor.moveToNext();
         }
         return phoneList;
     }
+}

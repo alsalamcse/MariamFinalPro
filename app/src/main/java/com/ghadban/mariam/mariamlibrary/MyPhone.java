@@ -1,10 +1,11 @@
+package com.ghadban.mariam.mariamlibrary;
+
 public class MyPhone
 {
     private int year;
     private  String name;
     private Double price;
     private String company;
-    private String  Production;
     private long _id;
     public MyPhone()
     {
@@ -15,7 +16,6 @@ public class MyPhone
         this.name = name;
         this.price = price;
         this.company = company;
-        this.Production = Production;
         this.year = year;
     }
 
@@ -23,7 +23,6 @@ public class MyPhone
         this.name = name;
         this.price = price;
         this.company = company;
-        this.Production = Production;
         this.year = year;
         this._id = _id ;
     }
@@ -35,10 +34,6 @@ public class MyPhone
 
     public String getCompany() {
         return company;
-    }
-
-    public String getProduction() {
-        return Production;
     }
 
     public  Double  getprice() {
@@ -61,10 +56,6 @@ public class MyPhone
         this.company = company;
     }
 
-    public void setProduction(String  Production) {
-        this.Production = Production;
-    }
-
     public void setPrice(Double price) {
         this.price = price;
     }
@@ -73,7 +64,7 @@ public class MyPhone
         this.year = year;
     }
 
-    public String toString() { return "name:"+name+ "price:" +price+ "company:"+company+ "Production:"+Production+ "year:"+year+ "id:"+ _id; }
+    public String toString() { return "name:"+name+ "price:" +price+ "company:"+company+ "year:"+year+ "id:"+ _id; }
 
 
 }

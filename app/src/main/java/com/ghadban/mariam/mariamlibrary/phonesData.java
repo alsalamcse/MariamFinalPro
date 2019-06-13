@@ -14,7 +14,6 @@ public class phonesData extends AppCompatActivity {
     private EditText etName;
     private EditText etPrice;
     private EditText etCompany;
-    private EditText etProduction;
     private EditText etYear;
 
     @Override
@@ -26,12 +25,28 @@ public class phonesData extends AppCompatActivity {
         etName = (EditText) findViewById(R.id.etName);
         etPrice = (EditText) findViewById(R.id.etPrice);
         etCompany = (EditText) findViewById(R.id.etCompany);
-        etProduction = (EditText) findViewById(R.id.etProduction);
         etYear = (EditText) findViewById(R.id.etYear);
 
     }
     public void onClick(View v){
-        if (v == btnSave) {
+        if (v == btnSave)
+        {
+            String n = etName.getText().toString();
+            String p = etPrice.getText().toString();
+            String c = etCompany.getText().toString();
+            String y = etYear.getText().toString();
+
+            Double d=Double.parseDouble(p);
+           Integer i=Integer.parseInt(y);
+
+            MyPhone myPhone = new MyPhone ();
+            myPhone.setName(n);
+            myPhone.setPrice(d);
+            myPhone.setCompany(c);
+            myPhone.setYear(i);
+
+            MyPhoneTable myPhoneTable=new MyPhoneTable(this);
+            myPhoneTable.addPhone(myPhone);
             Intent Intent = new Intent(phonesData.this,AllPhones.class);
             startActivity(Intent);
         }

@@ -8,12 +8,12 @@
 
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="130dp"
-        android:layout_height="63dp"
+        android:layout_width="120dp"
+        android:layout_height="62dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="78dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="47dp"
         android:background="@android:color/holo_orange_light"
         android:onClick="onClick"
         android:text="Save"
@@ -22,62 +22,53 @@
 
     <EditText
         android:id="@+id/etCompany"
-        android:layout_width="227dp"
-        android:layout_height="wrap_content"
+        android:layout_width="359dp"
+        android:layout_height="69dp"
         android:layout_alignStart="@+id/etName"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="320dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="0dp"
         android:ems="10"
         android:hint="Company"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/etName"
-        android:layout_width="229dp"
-        android:layout_height="wrap_content"
+        android:layout_width="358dp"
+        android:layout_height="63dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="165dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="168dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/etPrice"
-        android:layout_width="227dp"
-        android:layout_height="wrap_content"
+        android:layout_width="359dp"
+        android:layout_height="63dp"
         android:layout_alignStart="@+id/etName"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="237dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="0dp"
         android:ems="10"
         android:hint="Price"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etProduction"
-        android:layout_width="229dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="84dp"
-        android:layout_marginBottom="282dp"
-        android:ems="10"
-        android:hint=" Production"
-        android:inputType="textPersonName" />
-
-    <EditText
         android:id="@+id/etYear"
-        android:layout_width="227dp"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/etProduction"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="2dp"
-        android:layout_marginBottom="197dp"
+        android:layout_marginBottom="161dp"
         android:ems="10"
-        android:hint=" Year of issue"
+        android:hint=" Year"
         android:inputType="textPersonName" />
 
     <TextView
@@ -85,8 +76,8 @@
         android:layout_width="282dp"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="-177dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="-99dp"
         android:layout_toStartOf="@+id/btnSave"
         android:text="Enter phone data :"
         android:textAllCaps="false"
